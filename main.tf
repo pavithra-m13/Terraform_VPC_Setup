@@ -99,8 +99,6 @@ resource "aws_vpc_security_group_ingress_rule" "pub_sg_ssh" {
 
 resource "aws_vpc_security_group_egress_rule" "pubegress" {
   security_group_id = aws_security_group.pub-sg.id  
-  from_port   = 0
-  to_port     = 0
   ip_protocol    = "-1"
   cidr_ipv4   = "0.0.0.0/0"
 }
@@ -133,8 +131,6 @@ resource "aws_vpc_security_group_ingress_rule" "pvt_sg_ssh" {
 
 resource "aws_vpc_security_group_egress_rule" "pvtegress" {
   security_group_id = aws_security_group.pvt-sg.id  
-  from_port   = 0
-  to_port     = 0
   ip_protocol    = "-1"
   cidr_ipv4   = "0.0.0.0/0"
 }
